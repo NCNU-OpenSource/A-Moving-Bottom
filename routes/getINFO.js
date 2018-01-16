@@ -8,12 +8,12 @@ router.get('/', function(req, res, next) {
     var temp = 0;
     var wet = 0;
     var rainRate = 1;
-    let weatherObj = {
-        "temperature": hot,
+    var weatherObj = {
+        "temperature": temp,
         "humidity": wet,
-        "dry_rate": rain
+        "dry_rate": rainRate
     };
-    res.send(weatherObj);
+//  res.send(weatherObj);
 });
 
 module.exports = router;
