@@ -37,5 +37,6 @@ MCP3008 IC 類比轉數位訊號
 
 資管二 潘冠妤
 
-＃google簡報連結
+＃ google簡報連結
+
 https://docs.google.com/presentation/d/1UutX-X2f8pQ8jybU9AkSP1JjFm69rDRkVTutnR269Ho/edit?usp=sharing
