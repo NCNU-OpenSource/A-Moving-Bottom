@@ -42,6 +42,7 @@ router.get('/', function(req, res, next) {
     getWeather().then(weatherObject => {
         temperature = weatherObject.temperature;
         humidity = weatherObject.humidity;
+        return getDry();
     }).then(dryRateObject => {
         dryRate = dryRateObject.dryRate;
         res.send({"temperature": temperature, "humidity": humidity, "dryRate": dryRate});
