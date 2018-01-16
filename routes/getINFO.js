@@ -18,24 +18,22 @@ function getWeather() {
 }
 
 function getDry() {
-    function getWeather() {
-        return new Promise((resolve, reject) => {
-            var tempSensor = mcpadc.openMcp3008(7, {speedHz: 1350000}, function (err) {
-                if(err) {
-                    reject({"error": err});
-                } else {
-                    tempSensor.read(function (err, reading) {
-                        if(err) {
-                            reject({"error": err});
-                        } else {
-                            console.log("dryRate: " + reading.value);
-                            resolve({"dryRate": reading.value});
-                        }
-                    });
-                }
-            });
+    return new Promise((resolve, reject) => {
+        var tempSensor = mcpadc.openMcp3008(7, {speedHz: 1350000}, function (err) {
+            if(err) {
+                reject({"error": err});
+            } else {
+                tempSensor.read(function (err, reading) {
+                    if(!err) {
+                        console.log("dryRate: " + reading.value);
+                        resolve({"dryRate": reading.value});
+                    } else {
+                        reject({"error": err});
+                    }
+                });
+            }
         });
-    }
+    });
 }
 
 /* GET weather api */
