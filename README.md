@@ -1,5 +1,7 @@
-# I-Wanna-Sleep
+# ChaoKe_Assistant(I-Wanna-Sleep)
 > 一個讓你決定要不要翹課的助理
+
+![本體](https://i.imgur.com/WGghXhM.jpg)
 
 # [Reference]
 
