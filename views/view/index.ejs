@@ -25,9 +25,9 @@
                 url: "http://10.105.28.197:3000/api",
                 datatype: "json",
                 success: function (data) {
-                    $('#temp').html(data.temperature);
-                    $('#wet').html(data.humidity);
-                    $('#rain').html(data.dryRate);
+                    $('#temp').html('溫度: ' + data.temperature);
+                    $('#wet').html('濕度: ' + data.humidity);
+                    $('#rain').html('乾燥指數: ' + data.dryRate * 100 + '%');
                     if(data.temperature < 20 && data.temperature > 26) {
                         alert('不適合上課！溫度不宜人！');
                     } else if(data.dryRate < 0.6) {
