@@ -4,7 +4,7 @@ var config = require('../env');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('view/index');
 });
 
 module.exports = router;
