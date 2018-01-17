@@ -27,6 +27,12 @@ FC-37 雨滴感測器
 
 MCP3008 IC 類比轉數位訊號
 
+# Node.js套件(其餘可參考package.json)
+
+node-dht-sensor: 處理DHT22訊號
+
+mcp-spi-adc: 處理MCP3008訊號
+
 # 組員名單
 
 資管三 蔡政佟 ->  學猴子爬樹吃香蕉
