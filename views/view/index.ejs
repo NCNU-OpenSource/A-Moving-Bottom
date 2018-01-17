@@ -33,7 +33,13 @@
                     $('#temp').html(data.temperature);
                     $('#wet').html(data.humidity);
                     $('#rain').html(data.dryRate);
-                    alert(data.dryRate);
+                    if(data.temperature >= 20 && data.temperature <= 26) {
+                        alert('不適合上課！溫度不宜人！');
+                    } else if(data.dryRate < 0.6) {
+                        alert('不適合上課！下雨惹！');
+                    } else {
+                        alert('認命吧！該去上課囉～');
+                    }
                 }
             });
     </script>
