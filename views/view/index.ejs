@@ -12,13 +12,16 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="md-3">
-            </div>
-            <div class="md-6 text-center">
-                Test
-            </div>
-            <div class="md-3">
-            </div>
+            <div id="temp"></div>
+        </div>
+        <div class="row">
+            <div id="wet"></div>
+        </div>
+        <div class="row">
+            <div id="rain"></div>
+        </div>
+        <div class="row">
+            <div id="anwser"></div>
         </div>
     </div>
     <script>
@@ -27,6 +30,9 @@
                 url: "http://10.105.28.197:3000/api",
                 datatype: "json",
                 success: function (data) {
+                    $('#temp').html(data.temperature);
+                    $('#wet').html(data.humidity);
+                    $('#rain').html(data.dryRate);
                     alert(data.dryRate);
                 }
             });
